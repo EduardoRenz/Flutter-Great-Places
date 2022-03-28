@@ -1,6 +1,6 @@
-# great_places
+# Flutter Great Places
 
-A new Flutter project.
+A new Flutter project using device hardware, like Camera and GPS.
 
 ## Getting Started
 
