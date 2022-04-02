@@ -28,7 +28,7 @@ class PlacesListScreen extends StatelessWidget {
                 child: CircularProgressIndicator(),
               )
             : Consumer<GreatPlaces>(
-                child: const Text('No places yet'),
+                child: const Center(child: Text('No places yet')),
                 builder: (ctx, greatPlaces, ch) => greatPlaces.itemsCount == 0
                     ? ch!
                     : ListView.builder(
@@ -39,6 +39,8 @@ class PlacesListScreen extends StatelessWidget {
                                 FileImage(greatPlaces.itemByIndex(i).image),
                           ),
                           title: Text(greatPlaces.itemByIndex(i).title),
+                          subtitle: Text(
+                              greatPlaces.itemByIndex(i).location!.address),
                           onTap: () {},
                         ),
                       ),
