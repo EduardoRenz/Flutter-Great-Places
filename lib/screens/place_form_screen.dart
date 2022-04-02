@@ -64,6 +64,9 @@ class _PlaceFormSCreenState extends State<PlaceFormScreen> {
                   child: Column(
                     children: [
                       TextField(
+                        onChanged: (value) {
+                          setState(() {});
+                        },
                         controller: _titleController,
                         decoration: const InputDecoration(labelText: 'Title'),
                       ),
